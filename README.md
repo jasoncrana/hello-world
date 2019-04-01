@@ -21,11 +21,17 @@ https://download.fedoraproject.org/pub/fedora/linux/releases/29/Workstation/x86_
 14.	Install Xrdp
 ```dnf install xrdp```
 15.	Start Xrdp
-```systemctl start xrdp```
+```
+systemctl start xrdp
+systemctl start xrdp-sesman
+```
 16.	Verify Xrdp is running
 ```netstat -antup | grep xrdp```
 17.	Enable Xrdp after reboot
-```systemctl enable xrdp```
+```
+systemctl enable xrdp
+systemctl enable xrdp-sesman
+```
 18.	Set pinhole in firewall
 ```
 firewall-cmd –permanent –add-port=3389/tcp
